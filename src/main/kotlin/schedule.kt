@@ -3,21 +3,22 @@ fun main(){
     val hours = 0..23
 
     val weekday:String
-    weekday = "Monday"
+    //weekday = "Monday"
     //weekday = "Tuesday"
     //weekday = "Wednesday"
     //weekday = "Thursday"
-    //weekday = "Friday"
+    weekday = "Friday"
     //weekday = "Saturday"
     //weekday = "Sunday"
     //weekday = "Holidays"
 
     val hour:Int
     //hour = 16
-    hour = 7
+    //hour = 7
     //hour = 8
     //hour = 9
     //hour = 17
+    hour = 20
     val range:IntRange
 
     print("On $weekday, the opening hours are: ")
@@ -29,22 +30,22 @@ fun main(){
         }
         "Tuesday" -> {
             range= hours.elementAt(8)..hours.elementAt(18)
-            println("${range.first} AM to ${range.last} PM")
+            println("${range.first} AM to ${range.last - 12} PM")
             hour in range
         }
         "Wednesday" -> {
             range= hours.elementAt(8)..hours.elementAt(18)
-            println("${range.first} AM to ${range.last} PM")
+            println("${range.first} AM to ${range.last - 12} PM")
             hour in range
         }
         "Thrusday" -> {
             range= hours.elementAt(8)..hours.elementAt(18)
-            println("${range.first} AM to ${range.last} PM")
+            println("${range.first} AM to ${range.last - 12} PM")
             hour in range
         }
         "Friday" -> {
             range = hours.elementAt(8)..hours.elementAt(21)
-            println("${range.first} AM to ${range.last} PM")
+            println("${range.first} AM to ${range.last - 12} PM")
             hour in range
         }
         "Saturday" -> {
