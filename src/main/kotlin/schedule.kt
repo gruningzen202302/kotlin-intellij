@@ -2,7 +2,7 @@ fun main(){
     val days = arrayOf("Monday","Tuesday","Wednesday","Thrusday","Friday","Saturday","Sunday")
     val hours = 0..23
 
-    var weekday:String
+    val weekday:String
     //weekday = "Monday"
     //weekday = "Tuesday"
     //weekday = "Wednesday"
@@ -10,11 +10,15 @@ fun main(){
     //weekday = "Friday"
     //weekday = "Saturday"
     weekday = "Sunday"
+    //weekday = "Holidays"
 
-    // weekday = "Holidays"
-    var hour:Int
-    hour=16
-    var range:IntRange
+    val hour:Int
+    hour = 16
+    //hour = 7
+    //hour = 8
+    //hour = 9
+    //hour = 17
+    val range:IntRange
 
     print("On $weekday, the opening hours are: ")
     val isOpen = when(weekday){
