@@ -23,7 +23,7 @@ fun main(){
     print("On $weekday, the opening hours are: ")
     val isOpen = when(weekday){
         days.first() -> {
-            range= hours.elementAt(8)..hours.elementAt(18)
+            range= hours.elementAt(8)..hours.elementAt(12)
             println("${range.first} AM to ${range.last} PM")
             hour in range
         }
