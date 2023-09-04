@@ -1,52 +1,55 @@
 fun main(){
+    val days = arrayOf("Monday","Tuesday","Wednesday","Thrusday","Friday","Saturday","Sunday")
+    val hours = 0..23
+
     var weekday:String
     //weekday = "Monday"
     //weekday = "Tuesday"
     //weekday = "Wednesday"
-    weekday = "Thursday"
+    //weekday = "Thursday"
     //weekday = "Friday"
     //weekday = "Saturday"
-    //weekday = "Sunday"
+    weekday = "Sunday"
 
     // weekday = "Holidays"
     var hour:Int
-    hour=20
+    hour=16
     var range:IntRange
 
     print("On $weekday, the opening hours are: ")
     val isOpen = when(weekday){
-        "Monday" -> {
-            range =8..18
+        days.first() -> {
+            range= hours.elementAt(8)..hours.elementAt(18)
             println("${range.first} AM to ${range.last} PM")
             hour in range
         }
-        "Tuesday" -> {
-            range= 8..18
+        days[1] -> {
+            range= hours.elementAt(8)..hours.elementAt(18)
             println("${range.first} AM to ${range.last} PM")
             hour in range
         }
-        "Wednesday" -> {
-            range = 8..18
+        days[2] -> {
+            range= hours.elementAt(8)..hours.elementAt(18)
             println("${range.first} AM to ${range.last} PM")
             hour in range
         }
-        "Thursday" -> {
-            range= 8..18
+        days[3] -> {
+            range= hours.elementAt(8)..hours.elementAt(18)
             println("${range.first} AM to ${range.last} PM")
             hour in range
         }
-        "Friday" -> {
-            range = 8..21
+        days[4] -> {
+            range = hours.elementAt(8)..hours.elementAt(21)
             println("${range.first} AM to ${range.last} PM")
             hour in range
         }
-        "Saturday" -> {
-            range = 9..16
+        days[5] -> {
+            range = hours.elementAt(9)..hours.elementAt(16)
             println("${range.first} AM to ${range.last} PM")
             hour in range
         }
-        "Sunday" -> {
-            range = 8..16
+        days.last() -> {
+            range = hours.elementAt(8)..hours.elementAt(16)
             println("${range.first} AM to ${range.last} PM")
             hour in range
         }
