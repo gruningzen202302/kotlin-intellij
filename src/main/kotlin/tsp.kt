@@ -1,3 +1,9 @@
+// EXAMPLE : Implementation
+//Budget
+//Price range Economy-FirstClass
+// Cities
+// Example from Atlanta airport
+// Atlanta flyes to  Boston Chicado and Denver
 fun main(){
     val days = arrayOf("Monday","Tuesday","Wednesday","Thrusday","Friday","Saturday","Sunday")
     val hours = 0..23
