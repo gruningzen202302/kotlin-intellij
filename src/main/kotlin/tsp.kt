@@ -2,6 +2,23 @@ fun main(){
     val days = arrayOf("Monday","Tuesday","Wednesday","Thrusday","Friday","Saturday","Sunday")
     val hours = 0..23
 
+    val cities = arrayOf("Atlanta", "Boston", "Chicago", "Denver")
+
+    fun permute(data: Array<String>, start: Int, end: Int) {
+        if (start == end) {
+            println(data.joinToString())
+        } else {
+            for (i in start..end) {
+                data[start] = data[i].also { data[i] = data[start] }
+                permute(data, start + 1, end)
+                data[start] = data[i].also { data[i] = data[start] }
+            }
+        }
+    }
+
+    permute(cities, 0, cities.size - 1)
+
+
     val weekday:String
     //weekday = "Monday"
     //weekday = "Tuesday"
