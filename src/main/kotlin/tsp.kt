@@ -2,21 +2,37 @@ fun main(){
     val days = arrayOf("Monday","Tuesday","Wednesday","Thrusday","Friday","Saturday","Sunday")
     val hours = 0..23
 
-    val cities = arrayOf("Atlanta", "Boston", "Chicago", "Denver")
+//    val cities = arrayOf("Atlanta", "Boston", "Chicago", "Denver")
+//
+//    fun permute(data: Array<String>, start: Int, end: Int) {
+//        if (start == end) {
+//            println(data.joinToString())
+//        } else {
+//            for (i in start..end) {
+//                data[start] = data[i].also { data[i] = data[start] }
+//                permute(data, start + 1, end)
+//                data[start] = data[i].also { data[i] = data[start] }
+//            }
+//        }
+//    }
+//
+//    permute(cities, 0, cities.size - 1)
 
-    fun permute(data: Array<String>, start: Int, end: Int) {
-        if (start == end) {
-            println(data.joinToString())
+    fun permute(data: MutableList<String>, i: Int, length: Int) {
+        if (i == length) {
+            println(data)
         } else {
-            for (i in start..end) {
-                data[start] = data[i].also { data[i] = data[start] }
-                permute(data, start + 1, end)
-                data[start] = data[i].also { data[i] = data[start] }
+            for (j in i until length) {
+                data[i] = data[j].also { data[j] = data[i] }
+                permute(data, i + 1, length)
+                data[i] = data[j].also { data[j] = data[i] }
             }
         }
     }
 
-    permute(cities, 0, cities.size - 1)
+    val cities = mutableListOf("Atlanta", "Boston", "Chicago", "Denver")
+    val n = cities.size
+    permute(cities, 0, n)
 
 
     val weekday:String
